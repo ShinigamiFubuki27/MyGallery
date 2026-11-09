@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="stars" id="stars"></div>
+    <div class="fog"></div>
+
+    <!-- ===== TOP NAVBAR ===== -->
+    <nav class="top-nav" id="topNav">
+        <button class="icon-btn" id="menuBtn" aria-label="Menu">☰</button>
+        <h1 class="nav-title">MY Gallery</h1>
+        <button class="icon-btn" id="searchBtn" aria-label="Search">🔍</button>
+    </nav>
+
+    <!-- ===== SIDEBAR KIRI ===== -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-profile">
+            <img src="gambar/aset/profile.jpeg" alt="Profile" class="profile-img" />
+            <h3>ShinigamiFubuki27</h3>
+        </div>
+        <div class="sidebar-divider"></div>
+        <nav class="sidebar-menu">
+            <a href="#" class="sidebar-link active" data-page="gallery">
+                <span class="sidebar-icon">🖼️</span>
+                <span>Gallery</span>
+            </a>
+            <a href="#" class="sidebar-link" data-page="contact">
+                <span class="sidebar-icon">👤</span>
+                <span>Info</span>
+            </a>
+        </nav>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+
+        <!-- ===== HALAMAN GALLERY ===== -->
+        <section id="page-gallery" class="page active">
+
+            <!-- Hero Header -->
+            <div class="gallery-hero">
+                <h2 class="hero-title">Collection</h2>
+                <p class="hero-subtitle">A personal archive of anime memories</p>
+                <div class="hero-stats">
+                    <span class="hero-stat"><strong id="statTotal">0</strong> Items</span>
+                    <span class="hero-stat-sep">·</span>
+                    <span class="hero-stat"><strong id="statCategories">0</strong> Categories</span>
+                    <span class="hero-stat-sep">·</span>
+                    <span class="hero-stat"><strong id="statTypes">0</strong> Media Types</span>
+                </div>
+            </div>
+
+            <!-- ===== SEARCH BAR UTAMA ===== -->
+            <div class="search-main-container">
+                <div class="search-main">
+                    <span class="search-icon-inside">🔍</span>
+                    <input type="text" id="searchInputMain" placeholder="Search title, description, or category..." />
+                    <button class="search-clear hidden" id="searchClear" aria-label="Clear">✕</button>
+                </div>
+            </div>
+
+            <!-- Filter Tipe Media (multi-select) -->
+            <div class="filter-container type-filter">
+                <span class="filter-label">Type</span>
+                <button class="type-btn active" data-type="all">All Media</button>
+                <button class="type-btn" data-type="image">Image</button>
+                <button class="type-btn" data-type="video">Video</button>
+                <button class="type-btn" data-type="audio">Audio</button>
+            </div>
+
+            <!-- Filter Kategori -->
+            <div class="filter-container category-filter">
+                <span class="filter-label">Category</span>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Vtuber">Vtuber</button>
+                <button class="filter-btn" data-filter="Manosaba">Manosaba</button>
+                <button class="filter-btn" data-filter="umamusume">Umamusume</button>
+                <button class="filter-btn" data-filter="touhou">Touhou</button>
+                <button class="filter-btn" data-filter="gundam">Gundam</button>
+                <button class="filter-btn" data-filter="lainnya">Lainnya</button>
+            </div>
+
+            <!-- Result Info -->
+            <div class="result-info">
+                <span id="resultText">Showing all 0 items</span>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </section>
+
+        <!-- ===== HALAMAN CONTACT ===== -->
+        <section id="page-contact" class="page">
+            <div class="contact-container">
+                <img src="gambar/aset/profile.jpeg" alt="Ihsan Rafi Aninditya" class="contact-img" />
+                <h1>Ihsan Rafi Aninditya</h1>
+                <p class="contact-subtitle">Siswa SMA Unggulan CT ARSA Foundation Sukoharjo</p>
+
+                <div class="contact-divider"></div>
+
+                <div class="contact-section">
+                    <h2>🎯 Tujuan Membuat Web Ini</h2>
+                    <p>
+                        Singkatnya, tujuan saya membuat website ini adalah untuk mengoleksi
+                        gambar anime favorit saya dan menyimpannya sebagai kenang-kenangan
+                        pribadi. Setiap gambar yang ada di sini memiliki cerita dan makna
+                        tersendiri bagi saya.
+                    </p>
+                </div>
+
+                <div class="contact-section">
+                    <h2>✨ Detail Lebih Lanjut</h2>
+                    <ul>
+                        <li>Menjadi arsip digital koleksi anime pribadi yang terorganisir.</li>
+                        <li>Menyimpan momen dan karya favorit dari berbagai series seperti Vtuber, Manosaba, Touhou, Gundam, Umamusume, dan lainnya.</li>
+                        <li>Melatih kemampuan coding dalam membuat website galeri yang interaktif.</li>
+                        <li>Membagikan koleksi kepada teman-teman dan sesama penggemar anime.</li>
+                        <li>Menjadi kenang-kenangan digital yang bisa dibuka kapan saja.</li>
+                    </ul>
+                </div>
+
+                <div class="contact-divider"></div>
+
+                <div class="contact-section" style="text-align: center;">
+                    <h2>📱 Media Sosial</h2>
+                    <div class="contact-socials">
+                        <a href="https://x.com/Umi_Mizuki27" target="_blank" class="social-link">
+                            <span class="social-icon">X</span>
+                            <span>Umi_Mizuki27</span>
+                        </a>
+                        <a href="https://www.instagram.com/ShinigamiFubuki27/" target="_blank" class="social-link">
+                            <span class="social-icon">Ig</span>
+                            <span>ShinigamiFubuki27</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" id="closeLightbox">&times;</span>
+        <button class="nav-arrow prev-arrow" id="prevArrow">‹</button>
+        <div class="lightbox-content" id="lightboxContent"></div>
+        <button class="nav-arrow next-arrow" id="nextArrow">›</button>
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <button class="fullscreen-btn" id="fullscreenBtn">Fullscreen</button>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="gallery-footer">
+        <div class="footer-content">
+            <!-- KIRI: Copyright -->
+            <p class="copyright">&copy; 2026 ShinigamiFubuki27</p>
+
+            <!-- TENGAH: Logo Tuyu + Teks ツユ -->
+            <div class="footer-brand">
+                <span class="footer-logo-text">ツユ</span>
+                <a href="https://www.youtube.com/@TUYU_official" target="_blank" >
+                    <img src="gambar/aset/background-footer.png" alt="Tsuyu" class="footer-logo-img" />
+                </a>
+            </div>
+
+            <!-- KANAN: Sosmed -->
+            <div class="social-links">
+                <a href="https://x.com/satori_koishi27" target="_blank" class="social-link">
+                    <span class="social-icon">X</span>
+                    <span class="social-username">Umi_Mizuki27</span>
+                </a>
+                <a href="https://www.instagram.com/shinigamifubuki/" target="_blank" class="social-link">
+                    <span class="social-icon">Ig</span>
+                    <span class="social-username">ShinigamiFubuki27</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-gallery hidden" id="backToGallery">
+        <span>←</span> Back to Gallery
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
